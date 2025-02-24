@@ -77,7 +77,7 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: mysql:5.7
+        image: mysql:latest
         env:
         - name: MYSQL_ROOT_PASSWORD
           value: "rootpassword"
@@ -137,7 +137,7 @@ kubectl get services mysql
 
 ### 3.2. **Connect to MySQL from Another Pod**
 ```bash
-kubectl run mysql-client --image=mysql:5.7 -it --rm -- bash
+kubectl run mysql-client --image=mysql:latest -it --rm -- bash
 mysql -h mysql-0.mysql -uroot -p
 ```
 ---

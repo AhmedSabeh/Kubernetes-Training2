@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: mysql
+        image: mysql:latest
         ports:
         - containerPort: 3306
         env:
@@ -31,5 +31,5 @@ spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
-          storage: 1Gi
+          storage: 5Gi
 
